@@ -1,0 +1,7 @@
+<%= link_to 'New Todo', new_todo_path %>
+
+<ul class='todos'>
+  <% for todo in @todos %>
+    <li><%= todo.title  %>§</li>
+  <% end %>
+</ul>

@@ -14,7 +14,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.1'
-  gem 'capybara', '~> 2.3.0'
+  gem 'capybara'
   gem 'byebug', platform: :mri
 end
 
