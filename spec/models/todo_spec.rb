@@ -27,3 +27,19 @@ describe Todo, '#complete!' do
   end
 
 end
+
+describe Todo, '#incomplete!' do
+
+  it 'destroys completed_at' do
+    todo = Todo.create!(completed_at: nil)
+
+    todo.complete!
+
+    todo.reload
+  
+    todo.incomplete!
+    
+    expect(todo).not_to be_completed
+  end
+
+end
