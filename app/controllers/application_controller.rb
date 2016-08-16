@@ -7,7 +7,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def set_session_email(email)
+    session[:current_email] = email 
+  end
+
+  def get_session_email
+    session[:current_email]
+  end
+
+#private
+
   def signed_in?
-    session[:current_email].present?
+    get_session_email.present?
   end
 end
